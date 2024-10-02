@@ -41,9 +41,25 @@
                 {% endif %}
                 {% if perms.cms.change_organization %}
                     <div class="flex flex-wrap gap-4">
+                        {% if form.instance.id %}
+<<<<<<< HEAD
+                            <button class="btn">
+                                {% translate "Update" %}
+                            </button>
+                        {% else %}
+                            <button class="btn">
+                                {% translate "Create" %}
+                            </button>
+=======
                         <button class="btn">
-                            {% translate "Save" %}
+                            {% translate "Update" %}
                         </button>
+                        {% else %}
+                        <button class="btn">
+                            {% translate "Create" %}
+                        </button>
+>>>>>>> a16cc09f (Fix #3063: Make save button consistent in organization form)
+                        {% endif %}
                     </div>
                 {% endif %}
             </div>
